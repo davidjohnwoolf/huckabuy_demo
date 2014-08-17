@@ -1,13 +1,9 @@
-<h1>Products</h1>
+<h1>Enter Query Params</h1>
 
-  <% @products_hash['results'].each do |result| %>
+<%= form_tag(results_path, method: :get) do %>
 
-    <h3>Result</h3>
-    <ul>
-      <% result.each do |key, value| %>
-          <li><strong><%= key %></strong> : <%= value %></li>
-      <% end %>
-      <br>
-    </ul>
+  <div>
+    <%= text_field_tag(:q) %>
+  </div>
 
-  <% end %>
+<% end %>
