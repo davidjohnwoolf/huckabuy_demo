@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/products' => 'products#index'
+  root 'products#index'
   get '/results' => 'products#results'
 
 end
